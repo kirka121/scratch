@@ -1,0 +1,130 @@
+#slidingDiv{
+    background-color: rgba(0,0,0,0.5);
+    width: 1000px;
+    height: 90px;
+    margin-left: -750px;
+    margin-top: 2px;
+    -webkit-border-radius: 0px 0px 10px 10px;
+    -moz-border-radius: 0px 0px 10px 10px;
+    border-radius: 0px 0px 10px 10px; 
+    display: none;
+    position: absolute; 
+    text-align: center;
+    border-left: 1px solid #9d9b9c;
+    border-right: 1px solid #9d9b9c;
+    border-bottom: 1px solid #9d9b9c;
+}
+#slidingDiv a:hover{
+    color: #081333;
+}    
+table.login_table{
+    color: #b7d2e7;
+    width: 90%;
+    margin: 0px auto;
+    padding: 0px;
+    border-spacing: 0;
+}
+table.login_table td{
+    text-align: center;
+}
+.login_button {
+    -moz-box-shadow:inset 0px 1px 0px 0px #b8bee6;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #b8bee6;
+    box-shadow: inset 0px 1px 0px 0px #b8bee6;
+    background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #83b9de), color-stop(1, #5f8ba3) );
+    background: -moz-linear-gradient( center top, #83b9de 5%, #5f8ba3 100% );
+    background-color: #83b9de;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    border: 1px solid #282194;
+    display: inline-block;
+    color: #081333;
+    font-size: 12px;
+    font-weight: normal;
+    padding: 10px 60px;
+    text-decoration: none;
+    text-shadow: 1px 1px 0px #a6c5e6;
+    font-family: Calibri, Arial, sans-serif;
+    font-size: 13px;
+}
+.login_button:hover {
+    background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #5f8ba3), color-stop(1, #83b9de) );
+    background: -moz-linear-gradient( center top, #5f8ba3 5%, #83b9de 100% );
+    background-color: #5f8ba3;
+}
+.login_button:active {
+    position: relative;
+    top: 1px;
+}
+.register_button {
+    -moz-box-shadow:inset 0px 1px 0px 0px #b8bee6;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #b8bee6;
+    box-shadow: inset 0px 1px 0px 0px #b8bee6;
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #68c791), color-stop(1, #4d9490) );
+    background:-moz-linear-gradient( center top, #68c791 5%, #4d9490 100% );
+    background-color:#68c791;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    border:1px solid #224a2b;
+    display: inline-block;
+    color: #081333;
+    font-size: 12px;
+    font-weight: normal;
+    padding: 10px 60px;
+    text-decoration: none;
+    text-shadow: 1px 1px 0px #a6c5e6;
+    font-family: Calibri, Arial, sans-serif;
+    font-size: 13px;
+}
+
+.register_button:hover {
+    background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #4d9490), color-stop(1, #68c791) );
+    background: -moz-linear-gradient( center top, #4d9490 5%, #68c791 100% );
+    background-color: #5f8ba3;
+}
+.register_button:active {
+    position: relative;
+    top: 1px;
+}
+
+input[type=text],input[type=password],input[type=email] {
+    font-family: Calibri, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.8);
+    width: 150px;
+    padding: 10px 18px 10px 10px;
+    border: none;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.1), inset 0 3px 2px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    background: #f9f9f9;
+    color: #777;
+    -webkit-transition: color 0.3s ease-out;
+    -moz-transition: color 0.3s ease-out;
+    -ms-transition: color 0.3s ease-out;
+    -o-transition: color 0.3s ease-out;
+    transition: color 0.3s ease-out;
+}
+
+input[type=text]:focus,input[type=password]:focus,button[type=submit]:focus {
+    outline: none;
+}
+#login_request label.error{
+    margin-left: 10px;
+    width: auto;
+    font-family: Calibri, Arial, sans-serif;
+    font-size: 12px;
+    display: block;
+    color: red;
+}
+#server_side_error{
+    margin-top: 50px;
+    margin-left: 45px;
+    position: absolute;
+}
+
+
+
+

@@ -1,0 +1,69 @@
+#submit_button{ 
+	text-align: center;
+}
+
+#signupForm{ 
+	width: 100%; 
+}
+#signupForm label.error{
+	margin-left: 10px;
+	width: auto;
+	display: inline;
+	color: red;
+}
+form.cmxform {
+	width: 370px;
+	color: #333;
+}
+
+form.cmxform legend {
+	padding: 0 2px;
+	font-weight: bold;
+	_margin: 0 -7px; /* IE Win */
+}
+form.cmxform legend, form.cmxform label {
+	color: #333;
+}
+
+form.cmxform fieldset {
+	border: none;
+	border-top: 1px solid #C9DCA6;
+	background: url(../images/cmxform-fieldset.gif) left bottom repeat-x;
+	background-color: #F8FDEF;
+}
+
+
+form.cmxform fieldset p, form.cmxform fieldset fieldset {
+	padding: 5px 10px 7px;
+	background: url(../images/cmxform-divider.gif) left bottom repeat-x;
+}
+
+div.error { display: none; }
+input {	border: 1px solid black; }
+input.checkbox { border: none }
+input:focus { border: 1px dotted black; }
+input.error { border: 1px dotted red; }
+form.cmxform .gray * { color: gray; }
+
+form.cmxform label {
+	display: inline-block;
+	line-height: 1.8;
+	vertical-align: top;
+	cursor: hand;
+}
+
+form.cmxform fieldset p {
+	list-style: none;
+	padding: 5px;
+	margin: 0;
+}
+
+form.cmxform label { width: 200px; } /* Width of labels */
+form.cmxform label.error {
+	margin-left: 103px;
+	width: 220px;
+}
+
+form.cmxform input.submit {
+	margin-left: 103px;
+}
