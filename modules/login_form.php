@@ -42,13 +42,21 @@
 		if($session->logged_in){
 			//user loggen in
 			?>
-			<table class="login_table">
+			<table class="control_panel">
 				<tr>
-					<td>
+					<td class="profile_picture">
+						<img src="assets/user_pofile_pictures/profile_pic.jpg" width="50" height="50">
+					</td>
+					
+					<td class="cp_links">
+						<a href="index.php?op=my_settings">Account Settings</a> | <a href="index.php?op=my_messages">Messages</a> | <a href="index.php?op=my_gigs">My Gigs</a> | <a href="index.php?op=my_runs">My Runs</a>
+					</td>
+					
+					<td class="logout">
 						<br/>
 						<form action="includes/user/process.php" method="POST" name="logout_request">
 							<input type="hidden" name="sublogout" value="1">
-							<a href="#" class="login_button" onclick="document.logout_request.submit()">Logout</a>
+							<a href="#" class="logout_button" onclick="document.logout_request.submit()">Logout</a>
 					   	</form>
 				   </td>
 				</tr>
@@ -64,6 +72,7 @@
 								<label for="user"><div id="server_side_error"><?php echo $form->error("user"); ?></div></label>
 								<input id="user" name="user" type="text" value="<?php echo $form->value("user"); ?>" placeholder="Username">
 							</p>
+						</td>
 						<td>
 							<p>
 								<label for="pass"><div id="server_side_error"><?php echo $form->error("pass"); ?></div></label>

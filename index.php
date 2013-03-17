@@ -14,7 +14,7 @@
 <body>
 	<!-- \/ shows the clouds picture -->
 	<div id="header" style="background-image:url(assets/images/total-bg.png);background-repeat:repeat-x;">
-		<!-- \/ shows the greay half tansparent header -->
+		<!-- \/ shows the grey half tansparent header -->
 		<div id="header_content">
 			<!-- \/ centers header items, devides header into 4 columns-->
 			<table class="header_links">

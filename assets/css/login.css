@@ -27,6 +27,61 @@ table.login_table{
 table.login_table td{
     text-align: center;
 }
+table.control_panel{
+    height: 30px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    border-spacing: 0;
+}
+table.control_panel td{
+    border: 1px solid grey;
+    text-align: center;
+}
+table.control_panel td.cp_links{
+    padding-left: 30px;
+    text-align: left;
+}
+table.control_panel td.profile_picture{
+    padding-top: 5px;
+    width: 60px;
+}
+table.control_panel td.logout{
+    width: 100px;
+    vertical-align: top;
+}
+.logout_button {
+    -moz-box-shadow:inset 0px 1px 0px 0px #b8bee6;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #b8bee6;
+    box-shadow: inset 0px 1px 0px 0px #b8bee6;
+    background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #83b9de), color-stop(1, #5f8ba3) );
+    background: -moz-linear-gradient( center top, #83b9de 5%, #5f8ba3 100% );
+    background-color: #83b9de;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    border: 1px solid #282194;
+    display: inline;
+    color: #081333;
+    font-size: 12px;
+    font-weight: normal;
+    padding: 10px 40px;
+    text-decoration: none;
+    text-shadow: 1px 1px 0px #a6c5e6;
+    font-family: Calibri, Arial, sans-serif;
+    font-size: 13px;
+    margin: auto;
+}
+.logout_button:hover {
+    background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #5f8ba3), color-stop(1, #83b9de) );
+    background: -moz-linear-gradient( center top, #5f8ba3 5%, #83b9de 100% );
+    background-color: #5f8ba3;
+}
+.logout_button:active {
+    position: relative;
+    top: 1px;
+}
 .login_button {
     -moz-box-shadow:inset 0px 1px 0px 0px #b8bee6;
     -webkit-box-shadow:inset 0px 1px 0px 0px #b8bee6;
