@@ -36,7 +36,6 @@ table.control_panel{
     border-spacing: 0;
 }
 table.control_panel td{
-    border: 1px solid grey;
     text-align: center;
 }
 table.control_panel td.cp_links{
