@@ -45,17 +45,23 @@
 		<div id="container_header">
 			<a href="/">Index</a>
 			<?php
-				if(!isset($_GET['op'])){
-					echo "";
-				} else {
+				if(isset($_GET['op']) && $_GET['op'] != ""){
 					$op = $_GET['op'];
 					echo " > "."<a href='index.php?op=$op'>".str_replace('_', ' ', $op)."</a>";
+				}
+				if(isset($_GET['cp']) && $_GET['cp'] != ""){
+					$cp = $_GET['cp'];
+					echo " > "."<a href='index.php?op=$op&cp=$cp'>".str_replace('_', ' ', $cp)."</a>";
+				}
+				if(isset($_GET['user']) && $_GET['user'] != ""){
+					$user = $_GET['user'];
+					echo " > "."<a href='index.php?op=$op&cp=$cp&user=$user'>".str_replace('_', ' ', $user)."</a>";
 				}
 			?>
 		</div>
 		<!-- \/ left side column with menu items -->
 		<div id="container_sidebar">
-			placeholder for menu
+			<?php include("modules/menu.php"); ?>
 		</div>
 		<!-- \/ right side column with content -->
 		<div id="container_content">
