@@ -25,7 +25,10 @@ class Upload
 	private function UploadImage(){
 		if(isset($_FILES["_upload"]))
 		{
-			$photo_file_ext = strtolower( end( explode( ".", $_FILES["_upload"]["name"] ) ) );
+			$photo_file_name_parts = explode( ".", $_FILES["_upload"]["name"] );
+			$photo_file_ext = end( $photo_file_name_parts );
+			$photo_file_ext = strtolower( $photo_file_ext );
+			
 			if(file_exists($_FILES["_upload"]["tmp_name"]))
 			{		
 				if($photo_file_ext=="jpg" || $photo_file_ext=="png")
@@ -73,7 +76,7 @@ class Upload
 							imagejpeg($image_dst_temp,	 $this->file_temp, 75);
 								
 							$image = file_get_contents( $this->file_temp );
-							$image = mysql_escape_string( $image );
+							$image = mysql_real_escape_string( $image );
 							unlink($this->file_temp);
 							imagedestroy($image_dst_temp);
 							
