@@ -1,4 +1,5 @@
 <?php
+//TEST ONLY, then delete
 error_reporting(E_ALL);
 
 mysql_connect("localhost","website","9doggy9");

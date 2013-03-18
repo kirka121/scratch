@@ -1,10 +1,11 @@
 <?php
+//TEST ONLY, then delete
 error_reporting(E_ALL);
 
 mysql_connect("localhost","website","9doggy9");
 mysql_select_db("giggo");
 
-if( !empty( $_FILES['image']['name'] ) ) {
+if( !empty( $_FILES['image']['tmp_name'] ) ) {
 	if ( $_FILES['image']['error'] == 0 ) {
 		if( substr($_FILES['image']['type'], 0, 5)=='image' ) {
 			$image = file_get_contents( $_FILES['image']['tmp_name'] );
