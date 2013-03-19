@@ -57,7 +57,7 @@
 			    <?php } ?>
 			    <p>
 			      <label for="profile_picture">Profile Picture</label>
-			      <img src="service/getimage.php?u=<?=$session->username;?>" width="50" height="50">
+			      <img src="service/getimage.php?u=<?php echo $session->userinfo['id'];?>" width="50" height="50">
 				  <input id="profile_picture" name="_upload" type="file" />
 			    </p>
 			    <?php if($form->error("firstname")){ ?>

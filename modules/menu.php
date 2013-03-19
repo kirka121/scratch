@@ -6,7 +6,7 @@
 				if($session->logged_in){
 					if(isset($session->username)){
 						?>
-						<th class="picture"><img src="service/getimage.php?u=<?php echo $session->username;?>" width="25" height="25"></th>
+						<th class="picture"><img src="service/getimage.php?u=<?php echo $session->userinfo['id'];?>" width="25" height="25"></th>
 						<th class="username"><?php echo $session->username;?></th><?php
 					}
 				}

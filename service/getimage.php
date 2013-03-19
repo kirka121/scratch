@@ -5,7 +5,7 @@
 
 	if ( isset( $_GET['u'] ) ) {
 		$id = $_GET['u'];
-		$res = mysql_query("SELECT `profile_picture` FROM `giggo_users` WHERE `username`='".$id."';");
+		$res = mysql_query("SELECT `profile_picture` FROM `giggo_users` WHERE `id`='".$id."';");
 		if ( mysql_num_rows( $res ) == 1 ) {
 			$image = mysql_fetch_array($res);
 		}
