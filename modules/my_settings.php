@@ -2,7 +2,11 @@
 <div id="my_settings">
 	<?php
 	if(!isset($_GET['cp']) || $_GET['cp'] == ""){
-		include("user/home.php"); 
+		?>
+		<script type="text/javascript">
+		window.location.href = "index.php?op=my_settings&cp=profile";
+		</script>
+		<?php
 	} else {
 		$req_page = trim($_GET['cp']);
 		if (is_file("modules/user/".$req_page.".php")) {

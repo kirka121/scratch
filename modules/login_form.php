@@ -49,7 +49,7 @@
 					</td>
 					
 					<td class="cp_links">
-						<a href="index.php?op=my_settings">Account Settings</a> | <a href="index.php?op=my_messages">Messages</a> | <a href="index.php?op=my_gigs">My Gigs</a> | <a href="index.php?op=my_runs">My Runs</a>
+						<a href="index.php?op=my_settings&cp=profile">Account Settings</a> | <a href="index.php?op=my_messages">Messages</a> | <a href="index.php?op=my_gigs">My Gigs</a> | <a href="index.php?op=my_runs">My Runs</a>
 					</td>
 					
 					<td class="logout">
