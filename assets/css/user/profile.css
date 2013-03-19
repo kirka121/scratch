@@ -25,17 +25,11 @@ form.public_profile_form {
     color: #333;
     margin: 7px;
 }
-form.public_profile_form legend {
-    padding: 0 2px;
-    font-weight: bold;
-    _margin: 0 -7px; /* IE Win */
-}
-form.public_profile_form legend, form.public_profile_form label {
+form.public_profile_form label {
     color: #333;
 }
 form.public_profile_form fieldset {
     border: none;
-    background-color: #F8FDEF;
 }
 form.public_profile_form fieldset p, form.public_profile_form fieldset fieldset {
     padding: 5px 10px 7px;

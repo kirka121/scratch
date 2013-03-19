@@ -16,19 +16,12 @@ form.cmxform {
 	color: #333;
 }
 
-form.cmxform legend {
-	padding: 0 2px;
-	font-weight: bold;
-	_margin: 0 -7px; /* IE Win */
-}
-form.cmxform legend, form.cmxform label {
+form.cmxform label {
 	color: #333;
 }
 
 form.cmxform fieldset {
 	border: none;
-	border-top: 1px solid #C9DCA6;
-	background-color: #F8FDEF;
 }
 
 
@@ -64,4 +57,17 @@ form.cmxform label.error {
 
 form.cmxform input.submit {
 	margin-left: 103px;
+}
+#register_table{
+    border: 1px solid #b0b1b1;
+    width: 100%;
+    border-spacing: 0px;
+}
+#register_table th{
+    height: 50px;
+    color: #000000;
+    text-align: left;
+    padding-left: 20px;
+    background-image: -webkit-linear-gradient(bottom, rgb(207,230,230) 28%, rgb(227,235,254) 64%);
+    background-color: rgb(207,230,230);
 }

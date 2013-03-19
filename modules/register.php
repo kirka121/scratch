@@ -89,73 +89,81 @@ else if(isset($_SESSION['regsuccess'])){
  */
 else{
 ?>
-<form class="cmxform" id="signupForm" action="includes/user/process.php" method="POST">
-  <fieldset>
-    <legend>Register</legend>
-    <?php if($form->error("firstname")){ ?>
-      <p>
-        <label><font size="2" color="#ff0000">Error</font></label>
-        <?php echo $form->error("firstname"); ?>
-      </p>
-    <?php } ?>
-    <p>
-      <label for="firstname">First name</label>
-      <input id="firstname" name="firstname" type="text" />
-    </p>
-    <?php if($form->error("lastname")){ ?>
-      <p>
-        <label><font size="2" color="#ff0000">Error</font></label>
-        <?php echo $form->error("lastname"); ?>
-      </p>
-    <?php } ?>
-    <p>
-      <label for="lastname">Last name</label>
-      <input id="lastname" name="lastname" type="text" />
-    </p>
-    <?php if($form->error("user")){ ?>
-      <p>
-        <label><font size="2" color="#ff0000">Error</font></label>
-        <?php echo $form->error("user"); ?>
-      </p>
-    <?php } ?>
-    <p>
-      <label for="username">User name</label>
-      <input id="username" name="username" type="text" />
-    </p>
-    <?php if($form->error("pass")){ ?>
-      <p>
-        <label><font size="2" color="#ff0000">Error</font></label>
-        <?php echo $form->error("pass"); ?>
-      </p>
-    <?php } ?>
-    <p>
-      <label for="password">Password</label>
-      <input id="password" name="password" type="password" />
-    </p>
-    <p>
-      <label for="confirm_password">Confirm password</label>
-      <input id="confirm_password" name="confirm_password" type="password" />
-    </p>
-    <?php if($form->error("email")){ ?>
-      <p>
-        <label><font size="2" color="#ff0000">Error</font></label>
-        <?php echo $form->error("email"); ?>
-      </p>
-    <?php } ?>
-    <p>
-      <label for="email">Email</label>
-      <input id="email" name="email" type="email" />
-    </p>
-    <p>
-      <label for="agree">Please agree to <a href="#" class="inner_link">our policy</a></label>
-      <input type="checkbox" class="checkbox" id="agree" name="agree" />
-    </p>
-    <p id="submit_button">
-      <input type="hidden" name="subjoin" value="1">
-      <input class="register_button" type="submit" value="Register">
-    </p>
-  </fieldset>
-</form>
+<table id="register_table">
+  <tr>
+    <th>Register</th>
+  </tr>
+  <tr>
+    <td>
+      <form class="cmxform" id="signupForm" action="includes/user/process.php" method="POST">
+        <fieldset>
+          <?php if($form->error("firstname")){ ?>
+            <p>
+              <label><font size="2" color="#ff0000">Error</font></label>
+              <?php echo $form->error("firstname"); ?>
+            </p>
+          <?php } ?>
+          <p>
+            <label for="firstname">First name</label>
+            <input id="firstname" name="firstname" type="text" />
+          </p>
+          <?php if($form->error("lastname")){ ?>
+            <p>
+              <label><font size="2" color="#ff0000">Error</font></label>
+              <?php echo $form->error("lastname"); ?>
+            </p>
+          <?php } ?>
+          <p>
+            <label for="lastname">Last name</label>
+            <input id="lastname" name="lastname" type="text" />
+          </p>
+          <?php if($form->error("user")){ ?>
+            <p>
+              <label><font size="2" color="#ff0000">Error</font></label>
+              <?php echo $form->error("user"); ?>
+            </p>
+          <?php } ?>
+          <p>
+            <label for="username">User name</label>
+            <input id="username" name="username" type="text" />
+          </p>
+          <?php if($form->error("pass")){ ?>
+            <p>
+              <label><font size="2" color="#ff0000">Error</font></label>
+              <?php echo $form->error("pass"); ?>
+            </p>
+          <?php } ?>
+          <p>
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" />
+          </p>
+          <p>
+            <label for="confirm_password">Confirm password</label>
+            <input id="confirm_password" name="confirm_password" type="password" />
+          </p>
+          <?php if($form->error("email")){ ?>
+            <p>
+              <label><font size="2" color="#ff0000">Error</font></label>
+              <?php echo $form->error("email"); ?>
+            </p>
+          <?php } ?>
+          <p>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" />
+          </p>
+          <p>
+            <label for="agree">Please agree to <a href="#" class="inner_link">our policy</a></label>
+            <input type="checkbox" class="checkbox" id="agree" name="agree" />
+          </p>
+          <p id="submit_button">
+            <input type="hidden" name="subjoin" value="1">
+            <input class="register_button" type="submit" value="Register">
+          </p>
+        </fieldset>
+      </form>
+    </td>
+  </tr>
+</table>
 <?php
 }
 ?>
