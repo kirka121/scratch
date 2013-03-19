@@ -8,7 +8,7 @@ class Upload
 	public $error;
 	
 	public function Upload(){
-		$this->file_temp = "assets/".md5(time()-rand()).".jpg";
+		$this->file_temp = "assets/tmp/".md5(time()-rand()).".jpg";
 	}
 	
 	public function ProfilePicture(){

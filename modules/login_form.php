@@ -45,7 +45,7 @@
 			<table class="control_panel">
 				<tr>
 					<td class="profile_picture">
-						<img src="/getimage.php?u=<?=$session->username;?>" width="50" height="50">
+						<img src="service/getimage.php?u=<?=$session->username;?>" width="50" height="50">
 					</td>
 					
 					<td class="cp_links">
