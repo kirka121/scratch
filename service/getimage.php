@@ -1,7 +1,7 @@
 <?php
 	//Show picture from database.
 	//v2
-	include("../includes/database.php");
+	include_once("../includes/database.php");
 
 	if ( isset( $_GET['u'] ) ) {
 		$id = $_GET['u'];
