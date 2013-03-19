@@ -175,8 +175,8 @@ class MySQLDB
       }else{
          $ulevel = USER_LEVEL;
       }
-      $q = "INSERT INTO ".TBL_USERS." (`username`, `password`, `userid`, `userlevel`, `email`, `timestamp`, `firstname`, `lastname`) VALUES ('$username', '$password', '0', $ulevel, '$email', $time, '$firstname', '$lastname',NULL)";
-      return mysql_query($q, $this->connection);
+      $q = "INSERT INTO ".TBL_USERS." (`username`, `password`, `userid`, `userlevel`, `email`, `timestamp`, `firstname`, `lastname`, `profile_picture`) VALUES ('$username', '$password', '0', $ulevel, '$email', $time, '$firstname', '$lastname',NULL)";
+	  return mysql_query($q, $this->connection);
    }
    
    /**
