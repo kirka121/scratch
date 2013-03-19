@@ -1,3 +1,20 @@
+#public_profile{
+    border: 1px solid #b0b1b1;
+    width: 100%;
+    border-spacing: 0px;
+}
+#public_profile th{
+    height: 50px;
+    color: #000000;
+    text-align: left;
+    padding-left: 20px;
+    background-image: -webkit-linear-gradient(bottom, rgb(207,230,230) 28%, rgb(227,235,254) 64%);
+    background-color: rgb(207,230,230);
+}
+
+#public_profile td{
+
+}
 .border{
    border: 3px solid #ddddde; 
 }
@@ -10,12 +27,6 @@ form.public_profile_form {
 }
 form.public_profile_form label {
     color: #333;
-}
-form.public_profile_form fieldset {
-    border: none;
-}
-form.public_profile_form fieldset p, form.public_profile_form fieldset fieldset {
-    padding: 5px 10px 7px;
 }
 div.error { 
     display: none; 
@@ -42,15 +53,24 @@ form.public_profile_form label {
     vertical-align: top;
     cursor: hand;
 }
-form.public_profile_form fieldset p {
-    list-style: none;
-    padding: 5px;
-    margin: 0;
-}
 form.public_profile_form label.error {
     margin-left: 103px;
     width: 220px;
 }
 form.public_profile_form input.submit {
     margin-left: 103px;
+}
+.email{
+    padding-top: 20px;
+    padding-left: 25px;
+}
+.button_verify{
+    width: 50px;
+}
+.button_delete{
+    width: 50px;
+    padding-right: 25px;
+}
+.left_padding{
+    padding-left: 20px;
 }

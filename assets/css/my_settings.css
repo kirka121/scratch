@@ -1,3 +1,20 @@
 #my_settings{
-    
+    border: 3px solid #ddddde;
+}
+#my_settings_container{
+    border: 1px solid #b0b1b1;
+    width: 100%;
+    border-spacing: 0px;
+}
+#my_settings_container th{
+    height: 50px;
+    color: #000000;
+    text-align: left;
+    padding-left: 20px;
+    background-image: -webkit-linear-gradient(bottom, rgb(207,230,230) 28%, rgb(227,235,254) 64%);
+    background-color: rgb(207,230,230);
+}
+
+#my_settings_container td{
+
 }

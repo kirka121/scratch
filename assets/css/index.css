@@ -116,8 +116,7 @@ table.header_links td.padding{
 	display:inline-block;
 	vertical-align: top;
 }
-#container_content{
-	border: 3px solid #ddddde; 
+#container_content{ 
 	margin: 8px;
 	display:inline-block;
 	width: 760px;

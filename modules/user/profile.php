@@ -41,7 +41,7 @@
     });
   });
 </script>
-<table id="public_profile">
+<table id="my_settings_container">
 	<tr>
 		<th>Public Profile</th>
 	</tr>

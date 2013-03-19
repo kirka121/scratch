@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="assets/css/my_settings.css">
+<div id="my_settings">
 	<?php
 	if(!isset($_GET['cp']) || $_GET['cp'] == ""){
 		?>
@@ -15,3 +16,4 @@
 	    }
 	}
 	?>
+</div>
