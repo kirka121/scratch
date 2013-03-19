@@ -1,3 +1,35 @@
 #menu{
-    border: 1px solid black;
+    border: 1px solid #b0b1b1;
+    width: 100%;
+    border-spacing: 0px;
+}
+#menu th{
+    height: 50px;
+    color: #000000;
+    background-image: -webkit-linear-gradient(bottom, rgb(207,230,230) 28%, rgb(227,235,254) 64%);
+}
+
+#menu td{
+    border-top: 1px solid #c2c2c3;
+}
+.link{
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    text-align: left;
+}
+.link:hover{
+    background-color: #e3ebfe;
+}
+.picture{
+    width: 50px;
+}
+.picture img{
+    padding-top: 3px;
+}
+.username{
+    text-align: left;
+}
+.border{
+   border: 3px solid #ddddde; 
 }
