@@ -319,9 +319,9 @@ class Session
             $form->setError($field, "First Name below 2 characters");
         } else if(strlen($subfirstname) > 40){
             $form->setError($field, "First Name above 40 characters");
-        } else if($database->firstnameTaken($subfirstname)){
+        } /*else if($database->firstnameTaken($subfirstname)){
             $form->setError($field, "First name already in use");
-        } else if(!preg_match("/^([0-9a-z])+$/i", $subfirstname)){
+        }*/ else if(!preg_match("/^([0-9a-z])+$/i", $subfirstname)){
             $form->setError($field, "First Name is not alphanumeric");
         } else if(!$subfirstname){
            $form->setError($field, "First Name not entered");
@@ -334,9 +334,9 @@ class Session
             $form->setError($field, "Last Name below 2 characters");
         } else if(strlen($sublastname) > 40){
             $form->setError($field, "Last Name above 40 characters");
-        } else if($database->lastnameTaken($sublastname)){
+        } /*else if($database->lastnameTaken($sublastname)){
             $form->setError($field, "Last name already in use");
-        } else if(!preg_match("/^([0-9a-z])+$/i", $sublastname)){
+        }*/ else if(!preg_match("/^([0-9a-z])+$/i", $sublastname)){
             $form->setError($field, "Last Name is not alphanumeric");
         } else if(!$sublastname){
             $form->setError($field, "Last Name not entered");
