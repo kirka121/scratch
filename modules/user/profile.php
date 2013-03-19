@@ -47,7 +47,7 @@
 	</tr>
 	<tr>
 		<td>
-			<form class="public_profile_form" id="update_profile" action="" method="POST">
+			<form enctype="multipart/form-data" class="public_profile_form" id="update_profile" action="" method="POST">
 				<fieldset>
 				<?php if($form->error("profile_picture")){ ?>
 			      <p>
@@ -57,7 +57,8 @@
 			    <?php } ?>
 			    <p>
 			      <label for="profile_picture">Profile Picture</label>
-			      <input id="profile_picture" name="profile_picture" type="text" />
+			      <img src="service/getimage.php?u=<?=$session->username;?>" width="50" height="50">
+				  <input id="profile_picture" name="_upload" type="file" />
 			    </p>
 			    <?php if($form->error("firstname")){ ?>
 			      <p>
@@ -67,7 +68,7 @@
 			    <?php } ?>
 			    <p>
 			      <label for="firstname">First name</label>
-			      <input id="firstname" name="firstname" type="text" />
+			      <input id="firstname" name="firstname" type="text" value="<?php echo $session->userinfo['firstname'];?>" />
 			    </p>
 			    <?php if($form->error("lastname")){ ?>
 			      <p>
@@ -77,7 +78,7 @@
 			    <?php } ?>
 			    <p>
 			      <label for="lastname">Last name</label>
-			      <input id="lastname" name="lastname" type="text" />
+			      <input id="lastname" name="lastname" type="text" value="<?php echo $session->userinfo['lastname'];?>" />
 			    </p>
 			    <?php if($form->error("email")){ ?>
 			      <p>
@@ -87,7 +88,7 @@
 			    <?php } ?>
 			    <p>
 			      <label for="email">Email</label>
-			      <input id="email" name="email" type="email" />
+			      <input id="email" name="email" type="email" value="<?php echo $session->userinfo['email'];?>" />
 			    </p>
 			    <?php if($form->error("url")){ ?>
 			      <p>
@@ -97,7 +98,7 @@
 			    <?php } ?>
 			    <p>
 			      <label for="url">URL</label>
-			      <input id="url" name="url" type="text" />
+			      <input id="url" name="url" type="text" value="<?php echo $session->userinfo['url'];?>" />
 			    </p>
 			    <?php if($form->error("company")){ ?>
 			      <p>
@@ -107,7 +108,7 @@
 			    <?php } ?>
 			    <p>
 			      <label for="company">Company</label>
-			      <input id="company" name="company" type="text" />
+			      <input id="company" name="company" type="text" value="<?php echo $session->userinfo['company'];?>" />
 			    </p>
 			    <?php if($form->error("location")){ ?>
 			      <p>
@@ -117,7 +118,7 @@
 			    <?php } ?>
 			    <p>
 			      <label for="location">Location</label>
-			      <input id="location" name="location" type="text" />
+			      <input id="location" name="location" type="text" value="<?php echo $session->userinfo['location'];?>" />
 			    </p>
 			    <p class="submit_button">
 			      <input type="hidden" name="subupdate" value="1">
