@@ -1,0 +1,27 @@
+.border{
+   border: 3px solid #ddddde; 
+}
+.left_padding{
+    padding-left: 20px;
+}
+.title{
+    font-weight: bold;
+    width: 25%;
+}
+#payment_plans{
+	margin: auto;
+	border-spacing: 0px;
+	border-collapse: collapse;
+	width: 95%;
+	padding: 20px;
+	background-color: #ffffff;
+}
+#payment_plans th{
+	background-image: -webkit-linear-gradient(bottom, #ffffff 28%, #ffffff 64%);
+	background-color: #ffffff;
+}
+#payment_plans td{
+	width: 25%;
+	height: 40px;
+	border-top: 1px solid #9c9c9c;
+}
