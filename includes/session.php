@@ -1,7 +1,4 @@
 <?php
-if( ! defined( 'DATALIFEENGINE' ) ) {
- die( "Hacking attempt!" );
-}
 /**
  * Session.php
  * 

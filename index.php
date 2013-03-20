@@ -1,5 +1,4 @@
 <?php
-	define ( 'DATALIFEENGINE', true );
 	include_once("includes/session.php"); 
 ?>
 <!doctype html>
