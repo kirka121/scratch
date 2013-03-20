@@ -1,4 +1,7 @@
 <?php
+if( ! defined( 'DATALIFEENGINE' ) ) {
+ die( "Hacking attempt!" );
+}
 /**
  * Session.php
  * 
@@ -7,6 +10,7 @@
  *
  *  Please subscribe to our feeds at http://blog.geotitles.com for more such tutorials
  */
+ 
 include("database.php");
 include("mailer.php");
 include("form.php");
