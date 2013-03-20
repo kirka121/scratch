@@ -7,7 +7,7 @@
 	<tr>
 		<td class="gigs">
 			<div class="title">Gigs:</div><br/>
-			When you post a gig, you will be notified about the gig's activity here.<br /><br />
+			When you post a gig, you will be notified about the gig's activity using the following means;<br /><br />
 			<input type="checkbox" name="notify_by_web">Web | <input type="checkbox" name="notify_by_email">Email | <input type="checkbox" name="notify_by_cell">Cell
 		</td>
 	</tr>
@@ -17,7 +17,7 @@
 	<tr>
 		<td class="runs">
 			<div class="title">Runs:</div><br/>
-			When you reply to gig posts, you will be notified about these posts here.<br /><br />
+			When you reply to gig posts, you will be notified about these posts using the following means;<br /><br />
 			<input type="checkbox" name="notify_by_web">Web | <input type="checkbox" name="notify_by_email">Email | <input type="checkbox" name="notify_by_cell">Cell
 		</td>
 	</tr>

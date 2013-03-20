@@ -6,6 +6,7 @@
 	<head>
 		<title>Giggo - Development Website</title>
 		<link rel="stylesheet" href="assets/css/index.css">
+		<link rel="stylesheet" href="assets/css/buttons.css">
 		<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon"> 
 		<link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
 		<script src="assets/js/jquery.js" type="text/javascript" charset="utf-8"></script>
@@ -45,6 +46,7 @@
 		<div id="container_header">
 			<a href="/">Index</a>
 			<?php
+				// display the appropriate headder links depending on what the _get is
 				if(isset($_GET['op']) && $_GET['op'] != ""){
 					$op = $_GET['op'];
 					echo " > "."<a href='index.php?op=$op'>".str_replace('_', ' ', $op)."</a>";
@@ -98,27 +100,26 @@
 			<tr>
 				<td>
 					<ul>
-						<li><a href="#">Lorem ipsum</a></li>
-						<li><a href="#">Morbi molestie imperdiet</a></li>
-						<li><a href="#">Etiam</a></li>
-						<li><a href="#">Vivamus tempus</a> </li>
-						<li><a href="#">Nam ac urna</a></li>
+						<li><a href="#">About Giggo</a></li>
+						<li><a href="#">How Giggo Works</a></li>
+						<li><a href="#">Become a GigRunner</a></li>
+						<li><a href="#">Meet Our GigRunners</a> </li>
+						<li><a href="#">Meet Our GigPosters</a></li>
 					</ul>
 				</td>
 				<td>
 					<ul>
-						<li><a href="#">Pellentesque eu</a></li>
-						<li><a href="#">Morbi vitae</a></li>
+						<li><a href="#">Join Giggo</a></li>
+						<li><a href="#">Login to Giggo</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+						<li><a href="#">Terms of Service</a></li>
 					</ul>
 				</td>
 				<td>
 					<ul>
-						<li><a href="#">Suspendisse eget</a></li>
-						<li><a href="#">Integer</a></li>
-						<li><a href="#">Nunc vitae</a></li>
-						<li><a href="#">Aliquam dignissim suscipit</a></li>
-						<li><a href="#">Praesent semper</a></li>
-						<li><a href="#">Aenean sollicitudin</a></li>
+						<li><a href="#">Contact Us</a></li>
+						<li><a href="#">F.A.Q.</a></li>
+						<li><a href="#">The Giggo Promise</a></li>
 					</ul>
 				</td>
 				<td class="social_media">

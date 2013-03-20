@@ -7,7 +7,6 @@
 	<tr>
 		<td class="email">
 			kirka121@gmail.com
-
 		</td>
 		<td class="button_verify">
 			<p class="submit_button">
