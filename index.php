@@ -49,15 +49,15 @@
 				// display the appropriate headder links depending on what the _get is
 				if(isset($_GET['op']) && $_GET['op'] != ""){
 					$op = $_GET['op'];
-					echo " > "."<a href='index.php?op=$op'>".str_replace('_', ' ', $op)."</a>";
+					echo " > "."<a class='inner_header_link' href='index.php?op=$op'>".str_replace('_', ' ', $op)."</a>";
 				}
 				if(isset($_GET['cp']) && $_GET['cp'] != ""){
 					$cp = $_GET['cp'];
-					echo " > "."<a href='index.php?op=$op&cp=$cp'>".str_replace('_', ' ', $cp)."</a>";
+					echo " > "."<a class='inner_header_link' href='index.php?op=$op&cp=$cp'>".str_replace('_', ' ', $cp)."</a>";
 				}
 				if(isset($_GET['user']) && $_GET['user'] != ""){
 					$user = $_GET['user'];
-					echo " > "."<a href='index.php?op=$op&cp=$cp&user=$user'>".str_replace('_', ' ', $user)."</a>";
+					echo " > "."<a class='inner_header_link' href='index.php?op=$op&cp=$cp&user=$user'>".str_replace('_', ' ', $user)."</a>";
 				}
 			?>
 		</div>
