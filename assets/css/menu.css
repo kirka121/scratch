@@ -37,3 +37,51 @@
 #active_link{
     border-left: 2px solid #86a5e9;
 }
+#menu_user_logged_in_img{
+    border: 1px solid #b0b1b1;
+    width: 100%;
+    border-spacing: 0px;
+}
+#menu_user_logged_in_img td{
+    height: 190px;
+    width: 190px;
+    padding: 1px;
+    border-spacing: 0px;
+    display: block;
+}
+#menu_user_logged_in_img img{
+    height: 190px;
+    width: 190px
+}
+#menu_user_logged_in_info{
+    border: none;
+    width: 100%;
+}
+#menu_user_logged_in_info th{
+    font-size: 25px;
+    text-align: left;
+}
+#menu_user_logged_in_info td.username{
+    font-size: 22px;
+    color: #383f4e;
+}
+#menu_user_logged_in_info td.bullet{;
+    width: 20px;
+}
+#menu_user_logged_in_info td.bullet img{;
+    width: 20px;
+    height: 20px;
+}
+#menu_user_logged_in_info td.description{
+    font-size: 16px;
+}
+#menu_user_logged_in_stats{
+    width: 100%;
+    border-spacing: 0px
+}
+#menu_user_logged_in_stats th{
+    font-size: 28px;
+}
+#menu_user_logged_in_stats td{
+    font-size: 11px;
+}

@@ -44,7 +44,7 @@
 	<div id="container">
 		<!-- \/ black header inside the box -->
 		<div id="container_header">
-			<a href="/">Index</a>
+			<a class="inner_header_link" href="/">Index</a>
 			<?php
 				// display the appropriate headder links depending on what the _get is
 				if(isset($_GET['op']) && $_GET['op'] != ""){
@@ -100,26 +100,26 @@
 			<tr>
 				<td>
 					<ul>
-						<li><a href="#">About Giggo</a></li>
-						<li><a href="#">How Giggo Works</a></li>
-						<li><a href="#">Become a GigRunner</a></li>
-						<li><a href="#">Meet Our GigRunners</a> </li>
-						<li><a href="#">Meet Our GigPosters</a></li>
+						<li><a class="footer_link" href="#">About Giggo</a></li>
+						<li><a class="footer_link" href="#">How Giggo Works</a></li>
+						<li><a class="footer_link" href="#">Become a GigRunner</a></li>
+						<li><a class="footer_link" href="#">Meet Our GigRunners</a> </li>
+						<li><a class="footer_link" href="#">Meet Our GigPosters</a></li>
 					</ul>
 				</td>
 				<td>
 					<ul>
-						<li><a href="#">Join Giggo</a></li>
-						<li><a href="#">Login to Giggo</a></li>
-						<li><a href="#">Privacy Policy</a></li>
-						<li><a href="#">Terms of Service</a></li>
+						<li><a class="footer_link" href="#">Join Giggo</a></li>
+						<li><a class="footer_link" href="#">Login to Giggo</a></li>
+						<li><a class="footer_link" href="#">Privacy Policy</a></li>
+						<li><a class="footer_link" href="#">Terms of Service</a></li>
 					</ul>
 				</td>
 				<td>
 					<ul>
-						<li><a href="#">Contact Us</a></li>
-						<li><a href="#">F.A.Q.</a></li>
-						<li><a href="#">The Giggo Promise</a></li>
+						<li><a class="footer_link" href="#">Contact Us</a></li>
+						<li><a class="footer_link" href="#">F.A.Q.</a></li>
+						<li><a class="footer_link" href="#">The Giggo Promise</a></li>
 					</ul>
 				</td>
 				<td class="social_media">
