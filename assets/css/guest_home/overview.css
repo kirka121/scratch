@@ -1,0 +1,26 @@
+#overview_container{
+	padding: 5px;
+}
+#overview_header{
+	padding: 5px;
+	font-size: 18px;
+	margin-top: 20px;
+}
+#overview_header img{
+	width: 30px;
+	height: 30px;
+	vertical-align:middle;
+}
+#overview_header img.arrow{
+	width: 20px;
+	height: 20px;
+}
+#slider1, #slider2, #slider3{
+	margin-left: 25px;
+	padding: 5px;
+    width: 95%;
+    display: none;
+    position: relative; 
+    text-align: center;
+    text-align: left;
+}   
