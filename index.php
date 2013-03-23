@@ -46,10 +46,14 @@
 		<div id="container_header">
 			<a class="inner_header_link" href="/">Index</a>
 			<?php
-				// display the appropriate headder links depending on what the _get is
+				// display the appropriate header links depending on what the _get is
 				if(isset($_GET['op']) && $_GET['op'] != ""){
 					$op = $_GET['op'];
 					echo " > "."<a class='inner_header_link' href='index.php?op=$op'>".str_replace('_', ' ', $op)."</a>";
+				}
+				if(isset($_GET['gh']) && $_GET['gh'] != ""){
+					$gh = $_GET['gh'];
+					echo " > "."<a class='inner_header_link' href='index.php?op=$op&gh=$gh'>".str_replace('_', ' ', $gh)."</a>";
 				}
 				if(isset($_GET['cp']) && $_GET['cp'] != ""){
 					$cp = $_GET['cp'];
@@ -85,6 +89,11 @@
 				} 
 			?>
 		</div>
+		<!-- include 3 column view of extra info if page is index and user is logged out -->
+		<?php
+		if (!isset($session->logged_in) || $session->logged_in == 0){
+			include("modules/guest_home_extra_info.php");
+		} ?>
 	</div>
 	<!-- \/ shows the people picture -->
 	<table class="footer">

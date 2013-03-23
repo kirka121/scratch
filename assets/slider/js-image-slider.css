@@ -53,9 +53,10 @@ div.mc-caption a:hover {
 }
 
 
-/* ------ built-in navigation bullets wrapper ------*/
+/*bullets commented out */
+/* ------ built-in navigation bullets wrapper ------
 div.navBulletsWrapper  {
-	top:320px; left:280px; /* Its position is relative to the #slider */
+	top:320px; left:280px; /* Its position is relative to the #slider 
 	width:150px;
 	background:none;
 	padding-left:20px;
@@ -64,18 +65,18 @@ div.navBulletsWrapper  {
 	cursor:pointer;
 }
 
-/* each bullet */
+/* each bullet 
 div.navBulletsWrapper div 
 {
     width:11px; height:11px;
     background:transparent url(bullet.png) no-repeat 0 0;
     float:left;overflow:hidden;vertical-align:middle;cursor:pointer;
-    margin-right:11px;/* distance between each bullet*/
-    _position:relative;/*IE6 hack*/
+    margin-right:11px;/* distance between each bullet
+    _position:relative;/*IE6 hack
 }
 
 div.navBulletsWrapper div.active {background-position:0 -11px;}
-
+/*
 
 /* --------- Others ------- */
 #slider 

@@ -1,0 +1,22 @@
+#extra_info_container{
+	width: 980px;
+	margin: 10px;
+}
+#extra_info_table{
+	margin: 7px;
+	width: 310px;
+	display: inline-table;
+	border: 1px solid #b0b1b1;
+    border-spacing: 0px;
+}
+#extra_info_table th{
+	height: 50px;
+    color: #000000;
+    background-image: -webkit-linear-gradient(bottom, rgb(207,230,230) 28%, rgb(227,235,254) 64%);
+    background-color: rgb(207,230,230);
+}
+#extra_info_table td{
+	padding-left: 10px;
+	padding-right: 10px;
+    border-top: 1px solid #c2c2c3;
+}

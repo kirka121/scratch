@@ -5,6 +5,10 @@
 	padding: 5px;
 	font-size: 18px;
 	margin-top: 20px;
+	-webkit-transition: background-color 0.6s ease;
+    -moz-transition: background-color 0.6s ease;
+    -o-transition: background-color 0.6s ease;
+    transition: background-color 0.6s ease;
 }
 #overview_header img{
 	width: 30px;
@@ -14,6 +18,13 @@
 #overview_header img.arrow{
 	width: 20px;
 	height: 20px;
+}
+#overview_header:hover{
+	background-color: rgba(0,0,0,0.3);
+	-webkit-transition: background-color 0.6s ease;
+    -moz-transition: background-color 0.6s ease;
+    -o-transition: background-color 0.6s ease;
+    transition: background-color 0.6s ease;
 }
 #slider1, #slider2, #slider3{
 	margin-left: 25px;
