@@ -1,33 +1,29 @@
 <link rel="stylesheet" href="assets/css/login.css">
 <script src="assets/js/showHide.js" type="text/javascript"></script>
-<script>
-  $(document).ready(function(){
-    $("#login_request").validate({
-      rules: {
-        user: {
-          required: true,
-          minlength: 5
-        },
-        pass: {
-          required: true,
-          minlength: 5
-        }
-      },
-      messages: {
-        user: {
-          required: "Please enter a username",
-          minlength: "5 characters minimum"
-        },
-        pass: {
-          required: "Please provide a password",
-          minlength: "5 characters minimum"
-        }
-      }
-    });
-  });
-</script>
 <script type="text/javascript">
 	$(document).ready(function(){
+	    $("#login_request").validate({
+	      rules: {
+	        user: {
+	          required: true,
+	          minlength: 5
+	        },
+	        pass: {
+	          required: true,
+	          minlength: 5
+	        }
+	      },
+	      messages: {
+	        user: {
+	          required: "Please enter a username",
+	          minlength: "5 characters minimum"
+	        },
+	        pass: {
+	          required: "Please provide a password",
+	          minlength: "5 characters minimum"
+	        }
+	      }
+	    });
 	   $('.show_hide').showHide({			 
 			speed: 500,  // speed you want the toggle to happen	
 			changeText: 1, // if you dont want the button text to change, set this to 0
