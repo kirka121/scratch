@@ -85,6 +85,7 @@
     background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #4d9490), color-stop(1, #68c791) );
     background: -moz-linear-gradient( center top, #4d9490 5%, #68c791 100% );
     background-color: #4d9490;
+    color: #081333;
 }
 .register_button:active {
     position: relative;
