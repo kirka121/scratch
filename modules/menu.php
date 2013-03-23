@@ -1,8 +1,8 @@
 <link rel="stylesheet" href="assets/css/menu.css">
 <!-- If curent page is home page -->
-<?php if(!isset($_GET['op']) || $_GET['op'] == ""){  
+<?php   
 	//if logged in
-	if($session->logged_in){ ?>
+	if($session->logged_in && (!isset($_GET['op']) || $_GET['op'] == "")){ ?>
 			<div class="border">
 				<table id="menu_user_logged_in_img">
 					<tr>
@@ -76,11 +76,21 @@
 				</tr>
 			</table>
 	<!-- if logged out -->
-	<?php } else { ?>
-		<div id="error">
-			home logged out
-		</div>
-	<?php } 
+	<?php } else if ((!$session->logged_in || $session->logged_in == "" || $session->logged_in == null) || $_GET['op'] == "guest_home"){ ?>
+		<div class="border">
+				<table id="menu">
+					<tr>
+						<th>How Giggo Works</th>
+					</tr>
+					<tr><td colspan="100%"><a class="inner_link"href="index.php?op=guest_home&gh=overview"><div class="link" <?php if(isset($_GET['gh']) && $_GET['gh'] =="overview"){ echo 'id="active_link"';}?>>General Overview</div></a></td></tr>
+					<tr><td colspan="100%"><a class="inner_link"href="index.php?op=guest_home&gh=poster_experience"><div class="link" <?php if(isset($_GET['gh']) && $_GET['gh'] =="poster_experience"){ echo 'id="active_link"';}?>>Gig Poster Experience</div></a></td></tr>
+					<tr><td colspan="100%"><a class="inner_link"href="index.php?op=guest_home&gh=runner_experience"><div class="link" <?php if(isset($_GET['gh']) && $_GET['gh'] =="runner_experience"){ echo 'id="active_link"';}?>>Gig Runner Experience</div></a></td></tr>
+					<tr><td colspan="100%"><a class="inner_link"href="index.php?op=guest_home&gh=giggo_guarantee"><div class="link" <?php if(isset($_GET['gh']) && $_GET['gh'] =="giggo_guarantee"){ echo 'id="active_link"';}?>>Giggo Guarantee</div></a></td></tr>
+					<tr><td colspan="100%"><a class="inner_link"href="index.php?op=guest_home&gh=pricing"><div class="link" <?php if(isset($_GET['gh']) && $_GET['gh'] =="pricing"){ echo 'id="active_link"';}?>>Pricing</div></a></td></tr>
+					<tr><td colspan="100%"><a class="inner_link"href="index.php?op=guest_home&gh=join_us"><div class="link" <?php if(isset($_GET['gh']) && $_GET['gh'] =="join_us"){ echo 'id="active_link"';}?>>Join Us</div></a></td></tr>
+				</table>
+			</div>
+	<?php
 // if current page is control panel (my_settings)
 } else if(isset($_GET['op']) && $_GET['op'] =="my_settings"){ ?>
 <div class="border">

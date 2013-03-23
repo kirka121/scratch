@@ -69,7 +69,12 @@
 		<div id="container_content">
 			<?php
 				if (!isset($_GET['op'])) { 
-					include("modules/home.php"); 
+					if (!isset($session->logged_in) || $session->logged_in == 0){
+						//if user not logged in, display guest_home, otherwise, display appropriate home
+						include("modules/guest_home.php");
+					} else {
+						include("modules/home.php"); 
+					}
 				} else {
 				  	$op = $_GET['op'];
 			      	if (is_file("modules/".$op.".php")) {

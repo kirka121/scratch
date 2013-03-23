@@ -85,3 +85,15 @@
 #menu_user_logged_in_stats td{
     font-size: 11px;
 }
+#menu_user_logged_out{
+    border: 1px solid #b0b1b1;
+    width: 100%;
+    border-spacing: 0px;
+}
+#menu_user_logged_out td{
+    height: 190px;
+    width: 190px;
+    padding: 1px;
+    border-spacing: 0px;
+    display: block;
+}
