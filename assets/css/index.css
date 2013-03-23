@@ -82,6 +82,9 @@ a.header_link:hover{
     -o-transition: background-color 0.6s ease;
     transition: background-color 0.6s ease;
 }
+#header_link_container img{
+	vertical-align: middle;
+}
 table.header_links{
 	color: #ffffff;
 	width: 1000px;
