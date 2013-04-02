@@ -3,7 +3,7 @@
 	
 	$email_from = "rihard27@gmail.com";
 
-	if($_POST['si_contact_action'] == 'send'){
+	if($_POST){
 		$project_title=$_POST['si_contact_ex_field1'];
 		$contact_name=$_POST['si_contact_ex_field2'];
 		$contact_email=$_POST['si_contact_ex_field3'];
@@ -34,8 +34,21 @@
 		$headers  = "Content-type: text/html; charset=UTF-8 \r\n";
 		$headers .= "From: Admin <$email_from>\r\n";
 
-		mail($contact_email, $subject, $message, $headers); 
-			
+		#mail($contact_email, $subject, $message, $headers); 
+	
+		include "libmail.php";
+
+		$m= new Mail('utf-8');  // можно сразу указать кодировку, можно ничего не указывать ($m= new Mail;)
+		$m->From( "Rihard;rihard27@gmail.com" ); // от кого Можно использовать имя, отделяется точкой с запятой
+		$m->To( $contact_email );   // кому, в этом поле так же разрешено указывать имя
+		$m->Subject( "тема сообщения" );
+		$m->Body("Сообщение. Текст письма");
+		$m->Priority(4) ;	// установка приоритета
+		$m->smtp_on("ssl://smtp.gmail.com","rihard27@gmail.com","cgpwuyisukbnkpyv", 465, 10); // используя эу команду отправка пойдет через smtp
+		$m->Send();	// отправка
+		//echo "Письмо отправлено, вот исходный текст письма:<br><pre>", $m->Get(), "</pre>";
+
+
 		mysql_query("INSERT INTO `test1` (project_title,contact_name,contact_email,phone_number,original_language,target_language,word_count,type_of_service,priority,document_type,document_format,comments) VALUES
 ('$project_title','$contact_name','$contact_email','$phone_number','$original_language','$target_language','$word_count','$type_of_service','$priority','$document_type','$document_format','$comments');");
 	
