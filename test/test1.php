@@ -1,5 +1,8 @@
 <?php
 	include_once("../includes/database.php");
+	
+	$email_from = "rihard27@gmail.com";
+
 	if($_POST['si_contact_action'] == 'send'){
 		$project_title=$_POST['si_contact_ex_field1'];
 		$contact_name=$_POST['si_contact_ex_field2'];
@@ -14,6 +17,25 @@
 		$document_format=$_POST['si_contact_ex_field11'];
 		$comments=$_POST['si_contact_ex_field13'];
 		
+
+
+		$subject = "Dear $contact_name";
+
+		$message = "
+		<html>
+			<head>
+				<title>Hello, $contact_name</title>
+			</head>
+			<body>
+				<p>Test, $contact_name</p>
+			</body>
+		</html>";
+
+		$headers  = "Content-type: text/html; charset=UTF-8 \r\n";
+		$headers .= "From: Admin <$email_from>\r\n";
+
+		mail($contact_email, $subject, $message, $headers); 
+			
 		mysql_query("INSERT INTO `test1` (project_title,contact_name,contact_email,phone_number,original_language,target_language,word_count,type_of_service,priority,document_type,document_format,comments) VALUES
 ('$project_title','$contact_name','$contact_email','$phone_number','$original_language','$target_language','$word_count','$type_of_service','$priority','$document_type','$document_format','$comments');");
 	
