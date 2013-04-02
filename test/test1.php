@@ -17,25 +17,6 @@
 		$document_format=$_POST['si_contact_ex_field11'];
 		$comments=$_POST['si_contact_ex_field13'];
 		
-
-
-		$subject = "Dear $contact_name";
-
-		$message = "
-		<html>
-			<head>
-				<title>Hello, $contact_name</title>
-			</head>
-			<body>
-				<p>Test, $contact_name</p>
-			</body>
-		</html>";
-
-		$headers  = "Content-type: text/html; charset=UTF-8 \r\n";
-		$headers .= "From: Admin <$email_from>\r\n";
-
-		#mail($contact_email, $subject, $message, $headers); 
-	
 		include "libmail.php";
 
 		$m= new Mail('utf-8');  // можно сразу указать кодировку, можно ничего не указывать ($m= new Mail;)
