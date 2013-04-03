@@ -116,12 +116,13 @@
             $m->Send(); // отправка
             echo "Quote Request Sent";
 
-
+            //insert info into the database.
             mysql_query("INSERT INTO `test1` (project_title,contact_name,contact_email,phone_number,original_language,target_language,word_count,type_of_service,priority,document_type,document_format,comments)
                          VALUES ('$project_title','$contact_name','$contact_email','$phone_number','$original_language','$target_language','$word_count','$type_of_service','$priority','$document_type','$document_format','$comments');");
         }
     }
-/* table test1
+
+/* database create script
 CREATE TABLE `test1` (
     `id` int(11) NOT NULL auto_increment,
     `username` varchar(30) NOT NULL,
@@ -142,120 +143,120 @@ CREATE TABLE `test1` (
 */
 ?>
 <table id="request_quote_table">
-  <tr>
-    <td>
-        <form enctype="multipart/form-data" action="" id="si_contact_form1" class="si_contact_form1" method="post">
-            <fieldset>
-                <p>
-                    <label for="si_contact_ex_field1_1">Project Title</label>
-                    <input type="text" id="si_contact_ex_field1_1" name="si_contact_ex_field1" size="40" placeholder="Title"/>
-                </p>
-                <p>
-                    <label for="si_contact_ex_field1_2">Contact Name</label>
-                    <input type="text" id="si_contact_ex_field1_2" name="si_contact_ex_field2" placeholder="First Last Name" size="40" />
-                </p>
-                <p>
-                    <label for="si_contact_ex_field1_3">Contact Email</label>
-                    <input type="text" id="si_contact_ex_field1_3" name="si_contact_ex_field3" placeholder="E-Mail" size="40" />
-                </p>
-                <p>
-                    <label for="si_contact_ex_field1_4">Phone Number</label>
-                    <input type="text" id="si_contact_ex_field1_4" name="si_contact_ex_field4" placeholder="###" size="40" />
-                </p>
-                <p>
-                    <label for="si_contact_ex_field1_5">Original Language</label>
-                    <select id="si_contact_ex_field1_5" name="si_contact_ex_field5">
-                        <option value="Arabic">Arabic</option>
-                        <option value="Chinese">Chinese</option>
-                        <option value="English">English</option>
-                        <option value="French">French</option>
-                        <option value="German">German</option>
-                        <option value="Italian">Italian</option>
-                        <option value="Japanese">Japanese</option>
-                        <option value="Polish">Polish</option>
-                        <option value="Russian">Russian</option>
-                        <option value="Spanish">Spanish</option>
-                        <option value="Ukrainian">Ukrainian</option>
-                        <option value="Other">Other</option>
-                    </select>
-                </p>
-                <p>
-                    <label for="si_contact_ex_field1_6">Target Language</label>
-                    <select id="si_contact_ex_field1_6" name="si_contact_ex_field6">
-                        <option value="Arabic">Arabic</option>
-                        <option value="Chinese">Chinese</option>
-                        <option value="English">English</option>
-                        <option value="French">French</option>
-                        <option value="German">German</option>
-                        <option value="Italian">Italian</option>
-                        <option value="Japanese">Japanese</option>
-                        <option value="Polish">Polish</option>
-                        <option value="Russian">Russian</option>
-                        <option value="Spanish">Spanish</option>
-                        <option value="Ukrainian">Ukrainian</option>
-                        <option value="Other">Other</option>
-                    </select>
-                </p>
-                <p>
-                    <label for="si_contact_ex_field1_7">Word Count</label>
-                    <input type="text" id="si_contact_ex_field1_7" name="si_contact_ex_field7" placeholder="###" size="40" />
-                </p>
-                <p>
-                    <label for="si_contact_ex_field1_8">Type of Service</label>
-                    <select id="si_contact_ex_field1_8" name="si_contact_ex_field8">
-                        <option value="Translation">Translation</option>
-                        <option value="Revision">Revision</option>
-                        <option value="Proofreading">Proofreading</option>
-                        <option value="Adaptation">Adaptation</option>
-                        <option value="Other">Other</option>
-                    </select>
-                </p>
-                <p>
-                    <label for="si_contact_ex_field1_9"> Priority</label>
-                    <select id="si_contact_ex_field1_9" name="si_contact_ex_field9">
-                        <option value="Regular">Regular</option>
-                        <option value="Rush">Rush</option>
-                        <option value="Urgent">Urgent</option>
-                        <option value="Overnight">Overnight</option>
-                        <option value="Weekend">Weekend</option>
-                    </select>
-                </p>
-                <p>
-                    <label for="si_contact_ex_field1_10">Document Type</label>
-                    <select id="si_contact_ex_field1_10" name="si_contact_ex_field10">
-                        <option value="General">General</option>
-                        <option value="Technical">Technical</option>
-                        <option value="Technical Complex">Technical Complex</option>
-                    </select>
-                </p>
-                <p>
-                    <label for="si_contact_ex_field1_11">Document Format</label>
-                    <select id="si_contact_ex_field1_11" name="si_contact_ex_field11">
-                        <option value="Word">Word</option>
-                        <option value="WordPerfect">WordPerfect</option>
-                        <option value="HTML">HTML</option>
-                        <option value="Text">Text</option>
-                        <option value="PDF">PDF</option>
-                        <option value="Lotus 1-2-3">Lotus 1-2-3</option>
-                        <option value="Lotus Notes">Lotus Notes</option>
-                        <option value="WordPro">WordPro</option>
-                        <option value="Excel">Excel</option>
-                        <option value="PowerPoint">PowerPoint</option>
-                        <option value="Visio">Visio</option>
-                        <option value="Other">Other</option>
-                    </select>
-                </p>
-                <p>
-                    <label for="si_contact_ex_field1_13">Comments</label>
-                    <textarea id="si_contact_ex_field1_13" name="si_contact_ex_field13" cols="40" rows="15" placeholder="Comments"></textarea>
-                </p>
-                <p id="submit_button">
-                    <input type="hidden" name="si_contact_action" value="send" />
-                    <input type="hidden" name="si_contact_form_id" value="1" />
-                    <input type="submit" style="margin:0; cursor:pointer;" value="Generate a Quote" class="login_button"/>
-                </p>
-            </filedset>
-        </form>
-    </td>
-  </tr>
+    <tr>
+        <td>
+            <form enctype="multipart/form-data" action="" id="si_contact_form1" class="si_contact_form1" method="post">
+                <fieldset>
+                    <p>
+                        <label for="si_contact_ex_field1_1">Project Title</label>
+                        <input type="text" id="si_contact_ex_field1_1" name="si_contact_ex_field1" size="40" placeholder="Title"/>
+                    </p>
+                    <p>
+                        <label for="si_contact_ex_field1_2">Contact Name</label>
+                        <input type="text" id="si_contact_ex_field1_2" name="si_contact_ex_field2" placeholder="First Last Name" size="40" />
+                    </p>
+                    <p>
+                        <label for="si_contact_ex_field1_3">Contact Email</label>
+                        <input type="text" id="si_contact_ex_field1_3" name="si_contact_ex_field3" placeholder="E-Mail" size="40" />
+                    </p>
+                    <p>
+                        <label for="si_contact_ex_field1_4">Phone Number</label>
+                        <input type="text" id="si_contact_ex_field1_4" name="si_contact_ex_field4" placeholder="###" size="40" />
+                    </p>
+                    <p>
+                        <label for="si_contact_ex_field1_5">Original Language</label>
+                        <select id="si_contact_ex_field1_5" name="si_contact_ex_field5">
+                            <option value="Arabic">Arabic</option>
+                            <option value="Chinese">Chinese</option>
+                            <option value="English">English</option>
+                            <option value="French">French</option>
+                            <option value="German">German</option>
+                            <option value="Italian">Italian</option>
+                            <option value="Japanese">Japanese</option>
+                            <option value="Polish">Polish</option>
+                            <option value="Russian">Russian</option>
+                            <option value="Spanish">Spanish</option>
+                            <option value="Ukrainian">Ukrainian</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="si_contact_ex_field1_6">Target Language</label>
+                        <select id="si_contact_ex_field1_6" name="si_contact_ex_field6">
+                            <option value="Arabic">Arabic</option>
+                            <option value="Chinese">Chinese</option>
+                            <option value="English">English</option>
+                            <option value="French">French</option>
+                            <option value="German">German</option>
+                            <option value="Italian">Italian</option>
+                            <option value="Japanese">Japanese</option>
+                            <option value="Polish">Polish</option>
+                            <option value="Russian">Russian</option>
+                            <option value="Spanish">Spanish</option>
+                            <option value="Ukrainian">Ukrainian</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="si_contact_ex_field1_7">Word Count</label>
+                        <input type="text" id="si_contact_ex_field1_7" name="si_contact_ex_field7" placeholder="###" size="40" />
+                    </p>
+                    <p>
+                        <label for="si_contact_ex_field1_8">Type of Service</label>
+                        <select id="si_contact_ex_field1_8" name="si_contact_ex_field8">
+                            <option value="Translation">Translation</option>
+                            <option value="Revision">Revision</option>
+                            <option value="Proofreading">Proofreading</option>
+                            <option value="Adaptation">Adaptation</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="si_contact_ex_field1_9"> Priority</label>
+                        <select id="si_contact_ex_field1_9" name="si_contact_ex_field9">
+                            <option value="Regular">Regular</option>
+                            <option value="Rush">Rush</option>
+                            <option value="Urgent">Urgent</option>
+                            <option value="Overnight">Overnight</option>
+                            <option value="Weekend">Weekend</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="si_contact_ex_field1_10">Document Type</label>
+                        <select id="si_contact_ex_field1_10" name="si_contact_ex_field10">
+                            <option value="General">General</option>
+                            <option value="Technical">Technical</option>
+                            <option value="Technical Complex">Technical Complex</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="si_contact_ex_field1_11">Document Format</label>
+                        <select id="si_contact_ex_field1_11" name="si_contact_ex_field11">
+                            <option value="Word">Word</option>
+                            <option value="WordPerfect">WordPerfect</option>
+                            <option value="HTML">HTML</option>
+                            <option value="Text">Text</option>
+                            <option value="PDF">PDF</option>
+                            <option value="Lotus 1-2-3">Lotus 1-2-3</option>
+                            <option value="Lotus Notes">Lotus Notes</option>
+                            <option value="WordPro">WordPro</option>
+                            <option value="Excel">Excel</option>
+                            <option value="PowerPoint">PowerPoint</option>
+                            <option value="Visio">Visio</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="si_contact_ex_field1_13">Comments</label>
+                        <textarea id="si_contact_ex_field1_13" name="si_contact_ex_field13" cols="40" rows="15" placeholder="Comments"></textarea>
+                    </p>
+                    <p id="submit_button">
+                        <input type="hidden" name="si_contact_action" value="send" />
+                        <input type="hidden" name="si_contact_form_id" value="1" />
+                        <input type="submit" value="Generate a Quote" class="login_button"/>
+                    </p>
+                </filedset>
+            </form>
+        </td>
+    </tr>
 </table>
