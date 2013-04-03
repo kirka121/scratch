@@ -4,62 +4,61 @@
 <script src="jquery.validate.js" type="text/javascript" charset="utf-8"></script>
 <script>
   $(document).ready(function(){
-    $("#signupForm").validate({
+    $("#si_contact_form1").validate({
       rules: {
-        firstname: "required",
-        lastname: "required",
-        username: {
-          required: true,
-          minlength: 5
+        si_contact_ex_field1: {
+            required: true,
+            minlength: 5,
+            maxlength: 40
         },
-        password: {
-          required: true,
-          minlength: 5
+        si_contact_ex_field2: {
+            required: true,
+            minlength: 5,
+            maxlength: 40
         },
-        confirm_password: {
-          required: true,
-          minlength: 5,
-          equalTo: "#password"
+        si_contact_ex_field3: {
+            email: true,
+            required: true
         },
-        email: {
-          required: true,
-          email: true
+        si_contact_ex_field4: {
+            required: true,
+            digits: true,
+            minlength: 10,
+            maxlength: 10
         },
-        topic: {
-          required: "#newsletter:checked",
-          minlength: 2
-        },
-        agree: "required"
+        si_contact_ex_field7: {
+            required: true,
+            digits: true
+        }
+
       },
       messages: {
-        firstname: "Please enter your firstname",
-        lastname: "Please enter your lastname",
-        username: {
-          required: "Please enter a username",
-          minlength: "Your username must consist of at least 5 characters"
+        si_contact_ex_field1: {
+            required: "Please enter a title",
+            minlength: "Minimum length is 5 characters",
+            maxlength: "Maximum length is 40 characters"
         },
-        password: {
-          required: "Please provide a password",
-          minlength: "Your password must be at least 5 characters long"
+        si_contact_ex_field2: {
+            required: "Please enter a name",
+            minlength: "Minimum length is 5 characters",
+            maxlength: "Maximum length is 40 characters"
         },
-        confirm_password: {
-          required: "Please provide a password",
-          minlength: "Your password must be at least 5 characters long",
-          equalTo: "Please enter the same password as above"
+        si_contact_ex_field3: {
+            email: "Please enter a valid E-mail",
+            required: "Please enter an E-Mail"
         },
-        email: "Please enter a valid email address",
-        agree: "Please accept our policy"
+        si_contact_ex_field4: {
+            required: "Please enter a phone number",
+            digits: "Only digits allowed",
+            minlength: "Phone must be 10 digits long",
+            maxlength: "Phone must be 10 digits long"
+        },
+        si_contact_ex_field7: {
+            required: "Please enter a word count",
+            digits: "Only digits allowed"
+        }
       }
     });
-    // propose username by combining first- and lastname
-    $("#username").focus(function() {
-      var firstname = $("#firstname").val();
-      var lastname = $("#lastname").val();
-      if(firstname && lastname && !this.value) {
-        this.value = firstname + "." + lastname;
-      }
-    });
-
   });
 </script>
 
@@ -151,7 +150,6 @@ CREATE TABLE `test1` (
                     <label for="si_contact_ex_field1_1">Project Title</label>
                     <input type="text" id="si_contact_ex_field1_1" name="si_contact_ex_field1" size="40" placeholder="Title"/>
                 </p>
-
                 <p>
                     <label for="si_contact_ex_field1_2">Contact Name</label>
                     <input type="text" id="si_contact_ex_field1_2" name="si_contact_ex_field2" placeholder="First Last Name" size="40" />
@@ -251,7 +249,7 @@ CREATE TABLE `test1` (
                     <label for="si_contact_ex_field1_13">Comments</label>
                     <textarea id="si_contact_ex_field1_13" name="si_contact_ex_field13" cols="40" rows="15" placeholder="Comments"></textarea>
                 </p>
-                <p>
+                <p id="submit_button">
                     <input type="hidden" name="si_contact_action" value="send" />
                     <input type="hidden" name="si_contact_form_id" value="1" />
                     <input type="submit" style="margin:0; cursor:pointer;" value="Generate a Quote" class="login_button"/>
