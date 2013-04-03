@@ -95,6 +95,12 @@ define("EMAIL_FROM_NAME", "Your Name");
 define("EMAIL_FROM_ADDR", "yourname@domain.com");
 define("EMAIL_WELCOME", true);//set this false if you do not want your users to receive a welcome Email after registration
 
+
+define("SMTP_SERVER", "ssl://smtp.gmail.com");
+define("SMTP_PORT", 465);
+define("SMTP_USER", "rihard27@gmail.com");
+define("SMTP_PASS", "cgpwuyisukbnkpyv");
+
 /**
  * This constant forces all users to have
  * lowercase usernames, capital letters are
