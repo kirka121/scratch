@@ -5,7 +5,18 @@
     $email_from = "kirka121@gmail.com";
 
     if($_POST){
-        $email=$_POST['si_contact_ex_field9'];
+		$salutation=$_POST['si_contact_ex_field1'];
+		$first_name=$_POST['si_contact_ex_field2'];
+		$last_name=$_POST['si_contact_ex_field3'];
+		$address=$_POST['si_contact_ex_field4'];
+		$city=$_POST['si_contact_ex_field5'];
+		$province=$_POST['si_contact_ex_field6'];
+		$postal_code=$_POST['si_contact_ex_field7'];
+		$phone=$_POST['si_contact_ex_field8'];
+		$email=$_POST['si_contact_ex_field9'];
+		$native_language=$_POST['si_contact_ex_field10'];
+		// ??? $additional_languages=$_POST['si_contact_ex_field11'];
+		$education=$_POST['si_contact_ex_field12'];
         
         //server side validation
         if ($email == "" || !$email){
