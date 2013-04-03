@@ -15,9 +15,9 @@ class Mailer extends Mail
 	* password.
 	*/
 	function sendWelcome($user, $email, $pass){
-		$subject = "GEO WEB STATION - Welcome!";
+		$subject = "Giggo - Welcome!";
 		$body = $user.",\n\n"
-			."Welcome! You've just registered at GEO WEB STATION "
+			."Welcome! You've just registered at Giggo "
 			."with the following information:\n\n"
 			."Username: ".$user."\n"
 			."Password: ".$pass."\n\n"
@@ -45,11 +45,11 @@ class Mailer extends Mail
 	* sign-up.
 	*/
 	function sendNewPass($user, $email, $pass){
-		$subject = "GEO WEB STATION - Your new password";
+		$subject = "Giggo - Your new password";
 		$body = $user.",\n\n"
 			."We've generated a new password for you at your "
 			."request, you can use this new password with your "
-			."username to log in to GEO WEB STATION.\n\n"
+			."username to log in to Giggo.\n\n"
  			."Username: ".$user."\n"
 			."New Password: ".$pass."\n\n"
 			."It is recommended that you change your password "
